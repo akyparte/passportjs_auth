@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/style.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="frame">
+        <div class="login-box">
+            <p> welcome to website</p>
+            <button id='login-btn'> Singup with google
+
+                <!-- <i class="fa fa-circle-o-notch fa-spin"></i> -->
+            </button>
+        </div>
+    </div>
+
+    <script defer>
+        let signupButton = document.getElementById('login-btn');
+
+        signupButton.addEventListener('click', async () => {
+            signupButton.innerHTML = `<i class="fa fa-circle-o-notch fa-spin"></i>
+             signing in process`
+            let a = document.createElement('a');
+            a.href = '/auth/google';
+            a.click();
+
+
+        })
+    </script>
+</body>
+
+</html>
